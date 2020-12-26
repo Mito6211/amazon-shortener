@@ -19,9 +19,9 @@ const showMessage = (msgText = "Message", status = "success") => {
 
 shortenBtn.addEventListener("click", () => {
     try {
-        const inputText = urlInput.value.replace("product/", "");
+        const inputText = urlInput.value.replace("product/", "").replace("/gp/", "/dp/");
         const beginningURL = inputText.match(/amazon\.(\w|\.)+/gim)[0];
-        const importantInfo = inputText.match(/\/dp\/.{10}/gim)[0];
+        const importantInfo = inputText.match(/\/(d)p\/.{10}/gim)[0];
         output.textContent = beginningURL + importantInfo;
         link = "https://www." + beginningURL + importantInfo;
     } catch {

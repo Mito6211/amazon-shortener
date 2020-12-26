@@ -17,16 +17,25 @@ shortenBtn.addEventListener("click", () => {
     }
 });
 
+const showMessage = (msgText = "Message", status = "success") => {
+    if (status !== "success" && status !== "failure") return;
+
+    errorMessage.textContent = msgText;
+    errorMessage.style.backgroundColor =
+        status === "success" ? "#33996999" : "#ff370099";
+    errorMessage.classList.remove("hidden");
+    setTimeout(() => {
+        errorMessage.classList.add("hidden");
+    }, 1000);
+};
+
 output.addEventListener("click", () => {
     navigator.clipboard.writeText(link).then(
         () => {
-            errorMessage.textContent = "Copied!";
-            errorMessage.style.backgroundColor = "#33996999";
-            errorMessage.classList.remove("hidden");
+            showMessage("Copied!", "success")
         },
         () => {
-            errorMessage.textContent = "Failed to copy.";
-            errorMessage.classList.remove("hidden");
+            showMessage("Failed to copy.", "failure");
         }
     );
 });

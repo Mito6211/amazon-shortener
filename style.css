@@ -13,8 +13,10 @@ body {
     padding: 15px;
     margin: 15px 0px;
     background-color: #ff370099;
+    opacity: 1;
+    transition: opacity 200ms linear;
 }
 
 .hidden {
-    display: none;
+    opacity: 0;
 }

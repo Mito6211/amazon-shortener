@@ -8,15 +8,25 @@ body {
     color: #242038;
 }
 
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #output {
     user-select: none;
     cursor: pointer;
+    margin: 15px 0px;
+    font-size: 1.25rem;
 }
 
 .message {
-    width: 250px;
+    user-select: none;
+    width: 100%;
     padding: 15px;
     margin: 15px 0px;
+    border-radius: 10px;
     background-color: #ff370099;
     opacity: 1;
     transition: opacity 200ms linear;
@@ -24,4 +34,19 @@ body {
 
 .hidden {
     opacity: 0;
+}
+
+form.input-and-button {
+    display: flex;
+}
+
+#url-input {
+    width: 74%;
+    height: 3rem;
+    font-size: 1.25rem;
+}
+
+#shorten-btn {
+    height: 3rem;
+    font-size: 1.25rem;
 }

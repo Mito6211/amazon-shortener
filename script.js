@@ -1,3 +1,4 @@
+const mainForm = document.getElementById("main-form");
 const urlInput = document.getElementById("url-input");
 const shortenBtn = document.getElementById("shorten-btn");
 const output = document.getElementById("output");
@@ -17,9 +18,12 @@ const showMessage = (msgText = "Message", status = "success") => {
     }, 1000);
 };
 
-shortenBtn.addEventListener("click", () => {
+mainForm.addEventListener("submit", (e) => {
+    e.preventDefault();
     try {
-        const inputText = urlInput.value.replace("product/", "").replace("/gp/", "/dp/");
+        const inputText = urlInput.value
+            .replace("product/", "")
+            .replace("/gp/", "/dp/");
         const beginningURL = inputText.match(/amazon\.(\w|\.)+/gim)[0];
         const importantInfo = inputText.match(/\/(d)p\/.{10}/gim)[0];
         output.textContent = beginningURL + importantInfo;

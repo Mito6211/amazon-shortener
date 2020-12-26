@@ -11,12 +11,18 @@
 </head>
 
 <body>
-    <h1>Amazon Link Shortener</h1>
-    <p>Click to copy, double click to open!</p>
-    <input type="text" placeholder="URL" id="url-input">
-    <button id="shorten-btn">Shorten</button>
-    <div id="output"></div>
-    <div class="message hidden" id="error-message"></div>
+    <div class="app">
+        <div class="container">
+            <h1>Amazon Link Shortener</h1>
+            <p>Click to copy, double click to open!</p>
+            <form class="input-and-button" id="main-form">
+                <input type="text" placeholder="URL" id="url-input" autofocus>
+                <button id="shorten-btn">Shorten</button>
+            </form>
+            <div id="output"></div>
+            <div class="message hidden" id="error-message"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 

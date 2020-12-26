@@ -29,17 +29,19 @@ const showMessage = (msgText = "Message", status = "success") => {
     }, 1000);
 };
 
-output.addEventListener("click", () => {
-    navigator.clipboard.writeText(link).then(
-        () => {
-            showMessage("Copied!", "success")
-        },
-        () => {
-            showMessage("Failed to copy.", "failure");
-        }
-    );
-});
-
-output.addEventListener("dblclick", () => {
-    window.open(link, "_blank");
+output.addEventListener("click", (event) => {
+    if (event.detail === 2) {
+        window.open(link, "_blank");
+    } else {
+        console.log("clicked");
+        navigator.clipboard.writeText(link).then(
+            () => {
+                showMessage("Copied!", "success");
+            },
+            (err) => {
+                showMessage("Failed to copy.", "failure");
+                console.error(err);
+            }
+        );
+    }
 });

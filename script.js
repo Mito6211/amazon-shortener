@@ -5,7 +5,7 @@ let link;
 
 shortenBtn.addEventListener("click", () => {
     const inputText = urlInput.value.replace("product/", "");
-    const beginningURL = inputText.match(/amazon\.\w+/gim)[0];
+    const beginningURL = inputText.match(/amazon\.(\w|\.)+/gim)[0];
     const importantInfo = inputText.match(/\/dp\/.{10}/gim)[0];
     output.textContent = beginningURL + importantInfo;
     link = "https://www." + beginningURL + importantInfo;

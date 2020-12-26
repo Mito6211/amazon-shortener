@@ -4,14 +4,15 @@ const output = document.getElementById("output");
 let link;
 
 shortenBtn.addEventListener("click", () => {
-    const beginningURL = urlInput.value.match(/amazon\.\w+/gim)[0];
-    const importantInfo = urlInput.value.match(/\/dp\/.{10}/gim)[0];
+    const inputText = urlInput.value.replace("product/", "");
+    const beginningURL = inputText.match(/amazon\.\w+/gim)[0];
+    const importantInfo = inputText.match(/\/dp\/.{10}/gim)[0];
     output.textContent = beginningURL + importantInfo;
     link = "https://www." + beginningURL + importantInfo;
     // make a href
 });
 
-const copyLink = () => {
+output.addEventListener("click", () => {
     navigator.clipboard.writeText(link).then(
         () => {
             console.log("copied!");
@@ -20,8 +21,8 @@ const copyLink = () => {
             console.log("failed to copy.");
         }
     );
-};
+});
 
-const openLink = () => {
+output.addEventListener("dblclick", () => {
     window.open(link, "_blank");
-};
+});

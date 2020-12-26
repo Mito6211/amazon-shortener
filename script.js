@@ -5,18 +5,6 @@ const errorMessage = document.getElementById("error-message");
 
 let link;
 
-shortenBtn.addEventListener("click", () => {
-    try {
-        const inputText = urlInput.value.replace("product/", "");
-        const beginningURL = inputText.match(/amazon\.(\w|\.)+/gim)[0];
-        const importantInfo = inputText.match(/\/dp\/.{10}/gim)[0];
-        output.textContent = beginningURL + importantInfo;
-        link = "https://www." + beginningURL + importantInfo;
-    } catch {
-        console.log("invalid link");
-    }
-});
-
 const showMessage = (msgText = "Message", status = "success") => {
     if (status !== "success" && status !== "failure") return;
 
@@ -29,11 +17,23 @@ const showMessage = (msgText = "Message", status = "success") => {
     }, 1000);
 };
 
+shortenBtn.addEventListener("click", () => {
+    try {
+        const inputText = urlInput.value.replace("product/", "");
+        const beginningURL = inputText.match(/amazon\.(\w|\.)+/gim)[0];
+        const importantInfo = inputText.match(/\/dp\/.{10}/gim)[0];
+        output.textContent = beginningURL + importantInfo;
+        link = "https://www." + beginningURL + importantInfo;
+    } catch {
+        output.textContent = "";
+        showMessage("Invalid Link", "failure");
+    }
+});
+
 output.addEventListener("click", (event) => {
     if (event.detail === 2) {
         window.open(link, "_blank");
     } else {
-        console.log("clicked");
         navigator.clipboard.writeText(link).then(
             () => {
                 showMessage("Copied!", "success");

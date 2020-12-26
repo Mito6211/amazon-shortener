@@ -1,8 +1,20 @@
-body {
-    background-color: #c3b7ac;
+* {
+    box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
 
-h1 {
-    color: #4281a4;
+body {
+    background-color: #c9eddc;
+    color: #242038;
+}
+
+.message {
+    width: 250px;
+    padding: 15px;
+    margin: 15px 0px;
+    background-color: #ff370099;
+}
+
+.hidden {
+    display: none;
 }

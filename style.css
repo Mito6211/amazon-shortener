@@ -29,7 +29,7 @@ body {
     max-width: 400px;
 }
 
-.referral-explanation {
+.accordion {
     flex-basis: 100%;
     order: 999;
     width: 400px;
@@ -38,18 +38,18 @@ body {
     align-self: center;
 }
 
-.referral-title h3,
-.referral-title span {
+.accordion-title h3,
+.accordion-title span {
     display: inline-block;
     cursor: pointer;
 }
 
-.referral-title span {
+.accordion-title span {
     font-weight: 700;
     font-size: 30px;
 }
 
-.referral-title {
+.accordion-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -163,7 +163,7 @@ form.input-and-button {
         margin-top: 10px;
     }
 
-    .referral-explanation {
+    .accordion {
         justify-self: default;
         align-self: default;
         width: 100%;

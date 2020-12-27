@@ -3,7 +3,6 @@ const urlInput = document.getElementById("url-input");
 const shortenBtn = document.getElementById("shorten-btn");
 const output = document.getElementById("output");
 const errorMessage = document.getElementById("error-message");
-const referralTitle = document.querySelector(".referral-title");
 
 let link;
 
@@ -51,12 +50,17 @@ output.addEventListener("click", (event) => {
     }
 });
 
-referralTitle.addEventListener("click", () => {
-    const explanation = document.querySelector(".explanation");
-    explanation.classList.toggle("active");
+const accordions = document.querySelectorAll(".accordion");
 
-    const plusOrMinus = document.querySelector(".referral-title span");
-    plusOrMinus.textContent = explanation.classList.contains("active")
-        ? "-"
-        : "+";
+accordions.forEach((accordion) => {
+    const [titleDIV, explanationP] = accordion.children;
+    titleDIV.addEventListener("click", () => {
+        explanationP.classList.toggle("active");
+
+        console.log(titleDIV);
+        const plusOrMinusSPAN = titleDIV.children[1];
+        plusOrMinusSPAN.textContent = explanationP.classList.contains("active")
+            ? "-"
+            : "+";
+    });
 });

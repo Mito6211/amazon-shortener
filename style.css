@@ -10,8 +10,18 @@ body {
 
 .app {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.referal {
+    flex: 1;
+    margin: 0px 30px;
+    max-width: 400px;
+}
+
+.logo {
+    width: 80%;
 }
 
 #output {
@@ -62,6 +72,26 @@ form.input-and-button {
     cursor: pointer;
 }
 
+@media (max-width: 900px) {
+    .app {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .container {
+        order: 1;
+    }
+
+    .referal {
+        margin: 0px;
+        max-width: 100%;
+        order: 2;
+    }
+
+    .referal img {
+        width: 200px;
+    }
+}
 
 @media (max-width: 500px) {
     form.input-and-button {

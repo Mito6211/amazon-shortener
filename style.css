@@ -6,18 +6,57 @@
 body {
     background-color: #c9eddc;
     color: #242038;
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+    margin: 0;
+    padding: 0;
 }
 
 .app {
     display: flex;
     justify-content: space-between;
-    flex: 1;
+    flex-wrap: wrap;
+    height: 100vh;
 }
 
 .referal {
     flex: 1;
     margin: 0px 30px;
     max-width: 400px;
+}
+
+.referal-explanation {
+    flex-basis: 100%;
+    order: 999;
+    width: 400px;
+    justify-self: center;
+    align-self: center;
+}
+
+.referal-title h3,
+.referal-title span {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.referal-title span {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.referal-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.explanation {
+    display: none;
+}
+
+.active {
+    display: block;
 }
 
 .logo {
@@ -99,10 +138,17 @@ form.input-and-button {
         height: 6rem;
     }
 
-    #url-input, #shorten-btn {
+    #url-input,
+    #shorten-btn {
         flex: 1;
         border-radius: 10px;
         height: 3rem;
         margin-top: 10px;
+    }
+
+    .referal-explanation {
+        justify-self: default;
+        align-self: default;
+        width: 100%;
     }
 }

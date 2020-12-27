@@ -3,6 +3,7 @@ const urlInput = document.getElementById("url-input");
 const shortenBtn = document.getElementById("shorten-btn");
 const output = document.getElementById("output");
 const errorMessage = document.getElementById("error-message");
+const referalTitle = document.querySelector(".referal-title");
 
 let link;
 
@@ -48,4 +49,8 @@ output.addEventListener("click", (event) => {
             }
         );
     }
+});
+
+referalTitle.addEventListener("click", () => {
+    document.querySelector(".explanation").classList.toggle("active");
 });

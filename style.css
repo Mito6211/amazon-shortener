@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    height: 130vh;
+    height: 150vh;
 }
 
 .app {
@@ -30,7 +30,6 @@ body {
 }
 
 .accordion {
-    flex-basis: 100%;
     order: 999;
     width: 400px;
     padding: 10px;
@@ -125,6 +124,15 @@ form.input-and-button {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     cursor: pointer;
+}
+
+.icon {
+    color: black;
+    text-decoration: none;
+}
+
+.icon > i {
+    margin-top: 20px;
 }
 
 @media (max-width: 900px) {

@@ -8,15 +8,18 @@ body {
     color: #242038;
     display: flex;
     flex-direction: column;
-    height: 200vh;
     margin: 0;
     padding: 0;
+    height: 130vh;
 }
 
 .app {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.container {
     height: 100vh;
 }
 
@@ -30,6 +33,7 @@ body {
     flex-basis: 100%;
     order: 999;
     width: 400px;
+    padding: 10px;
     justify-self: center;
     align-self: center;
 }
@@ -131,6 +135,7 @@ form.input-and-button {
 
     .container {
         order: 1;
+        height: auto;
     }
 
     .referal {

@@ -52,5 +52,11 @@ output.addEventListener("click", (event) => {
 });
 
 referalTitle.addEventListener("click", () => {
-    document.querySelector(".explanation").classList.toggle("active");
+    const explanation = document.querySelector(".explanation");
+    explanation.classList.toggle("active");
+
+    const plusOrMinus = document.querySelector(".referal-title span");
+    plusOrMinus.textContent = explanation.classList.contains("active")
+        ? "-"
+        : "+";
 });

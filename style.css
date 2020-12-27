@@ -21,6 +21,15 @@ body {
 
 .container {
     height: 100vh;
+    order: 2;
+}
+
+.referral.first {
+    order: 1;
+}
+
+.referral.second {
+    order: 3;
 }
 
 .referral {

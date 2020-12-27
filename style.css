@@ -23,13 +23,13 @@ body {
     height: 100vh;
 }
 
-.referal {
+.referral {
     flex: 1;
     margin: 0px 30px;
     max-width: 400px;
 }
 
-.referal-explanation {
+.referral-explanation {
     flex-basis: 100%;
     order: 999;
     width: 400px;
@@ -38,18 +38,18 @@ body {
     align-self: center;
 }
 
-.referal-title h3,
-.referal-title span {
+.referral-title h3,
+.referral-title span {
     display: inline-block;
     cursor: pointer;
 }
 
-.referal-title span {
+.referral-title span {
     font-weight: 700;
     font-size: 30px;
 }
 
-.referal-title {
+.referral-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -138,13 +138,13 @@ form.input-and-button {
         height: auto;
     }
 
-    .referal {
+    .referral {
         margin: 0px;
         max-width: 100%;
         order: 2;
     }
 
-    .referal img {
+    .referral img {
         width: 200px;
     }
 }
@@ -163,7 +163,7 @@ form.input-and-button {
         margin-top: 10px;
     }
 
-    .referal-explanation {
+    .referral-explanation {
         justify-self: default;
         align-self: default;
         width: 100%;

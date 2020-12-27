@@ -3,7 +3,7 @@ const urlInput = document.getElementById("url-input");
 const shortenBtn = document.getElementById("shorten-btn");
 const output = document.getElementById("output");
 const errorMessage = document.getElementById("error-message");
-const referalTitle = document.querySelector(".referal-title");
+const referralTitle = document.querySelector(".referral-title");
 
 let link;
 
@@ -51,11 +51,11 @@ output.addEventListener("click", (event) => {
     }
 });
 
-referalTitle.addEventListener("click", () => {
+referralTitle.addEventListener("click", () => {
     const explanation = document.querySelector(".explanation");
     explanation.classList.toggle("active");
 
-    const plusOrMinus = document.querySelector(".referal-title span");
+    const plusOrMinus = document.querySelector(".referral-title span");
     plusOrMinus.textContent = explanation.classList.contains("active")
         ? "-"
         : "+";

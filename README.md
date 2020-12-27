@@ -1,4 +1,4 @@
 # Amazon Shortener
 
 Quick and easy way to shorten amazon links!\
-Live Demo: https://amazon-shortener.netlify.app/
+Live Demo: https://www.shortify.cf

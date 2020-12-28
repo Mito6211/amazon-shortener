@@ -38,7 +38,7 @@ body {
     max-width: 400px;
 }
 
-.accordion {
+.accordion, .faq {
     order: 999;
     width: 400px;
     padding: 10px;
@@ -135,8 +135,11 @@ form.input-and-button {
     cursor: pointer;
 }
 
-.icon {
+.icon, .faq a {
     color: black;
+}
+
+.icon {
     text-decoration: none;
 }
 

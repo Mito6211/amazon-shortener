@@ -87,7 +87,7 @@ body {
 
 .message {
     user-select: none;
-    width: 100%;
+    width: 50%;
     padding: 15px;
     margin: 15px 0px;
     border-radius: 10px;
